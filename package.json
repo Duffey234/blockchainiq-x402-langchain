@@ -1,0 +1,31 @@
+{
+  "name": "blockchainiq-langchain",
+  "version": "0.1.0",
+  "description": "LangChain.js tools for the Blockchain IQ x402 crypto data API (market brief and event risk, paid per call in USDC on Base).",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": ["dist/src", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "tsc -p . && node --test dist/test/",
+    "typecheck": "tsc -p . --noEmit",
+    "probe": "tsc -p . && node dist/examples/probe.js",
+    "paid-call": "tsc -p . && node dist/examples/paid-call.js"
+  },
+  "keywords": ["langchain", "langchainjs", "tool", "x402", "blockchainiq", "usdc", "base", "crypto-data"],
+  "dependencies": {
+    "@langchain/core": "1.3.0",
+    "@x402/core": "2.28.0",
+    "@x402/evm": "2.28.0",
+    "@x402/fetch": "2.28.0",
+    "viem": "2.38.3",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.6.0"
+  }
+}
